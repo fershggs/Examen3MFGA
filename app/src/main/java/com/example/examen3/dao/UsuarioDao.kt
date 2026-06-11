@@ -11,4 +11,6 @@ interface UsuarioDao {
     @Insert
     suspend fun registrarUsuario(usuario: Usuario)
 
+    @Query("SELECT * FROM usuarios_table WHERE nombre = :nombre AND password = :contrasena LIMIT 1")
+    suspend fun login(nombre: String, contrasena: String): Usuario?
 }
