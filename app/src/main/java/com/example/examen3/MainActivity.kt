@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         val db = MyApplication.getDatabase(this)
         val usuarioDao = db.usuarioDao()
 
-        // Botón para ir a la pantalla de registro
+
         binding.btnRegister.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
@@ -51,11 +51,11 @@ class MainActivity : AppCompatActivity() {
 
                 withContext(Dispatchers.Main) {
                     if (usuarioEncontrado != null) {
-                        // Si existe, abrimos ProfileActivity
+
                         val intent = Intent(this@MainActivity, ProfileActivity::class.java)
                         startActivity(intent)
                     } else {
-                        // Si no coincide, mostramos el mensaje Toast obligatorio
+
                         Toast.makeText(this@MainActivity, "Las credenciales no son correctas", Toast.LENGTH_SHORT).show()
                     }
                 }
