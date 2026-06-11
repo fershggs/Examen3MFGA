@@ -1,89 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="32dp"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/tvwWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="21dp"
         android:text="Bienvenid@"
         android:textSize="28sp"
-        android:textColor="#4A4A4A"
-        app:layout_constraintBottom_toTopOf="@+id/ettUsername"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintBottom_toTopOf="@+id/ettUserName"
+        app:layout_constraintStart_toStartOf="@+id/ettUserName" />
 
     <EditText
-        android:id="@+id/ettUsername"
-        android:layout_width="match_parent"
+        android:id="@+id/ettUserName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="168dp"
         android:ems="10"
-        android:hint="Nombre de usuario"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/ettPassword"
+        android:text="Nombre de usuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvwWelcome" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <EditText
         android:id="@+id/ettPassword"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="6dp"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ettUsername" />
+        app:layout_constraintEnd_toEndOf="@+id/ettUserName"
+        app:layout_constraintTop_toBottomOf="@+id/ettUserName" />
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:paddingStart="32dp"
-        android:paddingEnd="32dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
         android:text="Iniciar sesión"
-        app:layout_constraintBottom_toTopOf="@+id/tvwNoAccount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ettPassword"
         app:layout_constraintTop_toBottomOf="@+id/ettPassword" />
 
     <TextView
         android:id="@+id/tvwNoAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="¿No tienes cuenta?"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnLogin"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:paddingStart="40dp"
-        android:paddingEnd="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
         android:text="Registrar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvwNoAccount"
         app:layout_constraintTop_toBottomOf="@+id/tvwNoAccount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
